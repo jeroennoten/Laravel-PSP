@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace JeroenNoten\LaravelPsp;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
