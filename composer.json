@@ -1,0 +1,22 @@
+{
+    "name": "jeroennoten/laravel-psp",
+    "description": "Laravel Package Service Provider for autoloading dependencies of packages in development",
+    "keywords": ["laravel", "package", "packages", "autoload", "composer", "dependencies", "development"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeroen Noten",
+            "email": "jeroennoten@me.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JeroenNoten\\LaravelPsp\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/filesystem": "^5.1",
+        "illuminate/support": "^5.1",
+        "symfony/finder": "^2.7"
+    }
+}
