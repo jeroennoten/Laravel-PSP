@@ -17,6 +17,6 @@
     "require": {
         "illuminate/filesystem": "^5.1",
         "illuminate/support": "^5.1",
-        "symfony/finder": "^2.7"
+        "symfony/finder": "^3.0"
     }
 }
