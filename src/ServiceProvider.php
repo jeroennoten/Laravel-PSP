@@ -11,12 +11,9 @@ class ServiceProvider extends BaseServiceProvider
 {
     public function boot()
     {
-        $path = base_path('packages/*/vendor');
+        $vendorPath = base_path('packages/*/vendor');
 
-        $autoloads = (new Finder)->in($path)
-                                 ->files()
-                                 ->name('autoload.php')
-                                 ->followLinks();
+        $autoloads = static::findAutoloadFiles($vendorPath);
 
         $files = new Filesystem;
         foreach ($autoloads as $file) {
@@ -28,5 +25,12 @@ class ServiceProvider extends BaseServiceProvider
     public function register()
     {
         //
+    }
+
+    public static function findAutoloadFiles($vendorPath) {
+        return (new Finder)->in($vendorPath)
+            ->files()
+            ->name('autoload.php')
+            ->followLinks();
     }
 }
