@@ -1,3 +1,5 @@
+#### For Laravel 5.1 and older, use the [1.0 branch](https://github.com/JeroenNoten/Laravel-PSP/tree/1.0)
+
 # Laravel Package Service Provider
 
 Developing packages in Laravel 5 is easy: just create a subdirectory for your package in a directory `packages`, add the necessary autoload details in your `composer.json` file and you're good to go.
