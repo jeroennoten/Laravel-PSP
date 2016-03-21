@@ -2,7 +2,7 @@
 
 Developing packages in Laravel 5 is easy: just create a subdirectory for your package in a directory `packages`, add the necessary autoload details in your `composer.json` file and you're good to go.
 Unless... your package has dependencies on other packages. Then you need to `require_once` the `vendor/autoload.php` file of each package. That is exactly what this package does. Of course, you can also use more heavy Laravel package development tools, such as [Studio](https://github.com/franzliedke/studio) or [Laravel Packager](https://github.com/Jeroen-G/laravel-packager),
-but if you (like me) don't really need al that additional stuff, you can use this package.
+but if you (like me) don't really need all that additional stuff, you can use this package.
 
 ## Installation
 
