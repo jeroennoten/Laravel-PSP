@@ -9,7 +9,7 @@ use Symfony\Component\Finder\SplFileInfo;
 
 class ServiceProvider extends BaseServiceProvider
 {
-    public function boot()
+    public function register()
     {
         $vendorPath = base_path('packages/*/vendor');
 
@@ -20,11 +20,6 @@ class ServiceProvider extends BaseServiceProvider
             /** @var SplFileInfo $file */
             $files->requireOnce($file->getRealPath());
         }
-    }
-
-    public function register()
-    {
-        //
     }
 
     public static function findAutoloadFiles($vendorPath) {
