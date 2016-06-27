@@ -23,9 +23,13 @@ class ServiceProvider extends BaseServiceProvider
     }
 
     public static function findAutoloadFiles($vendorPath) {
-        return (new Finder)->in($vendorPath)
-            ->files()
-            ->name('autoload.php')
-            ->followLinks();
+        try {
+            return (new Finder)->in($vendorPath)
+                ->files()
+                ->name('autoload.php')
+                ->followLinks();
+        } catch (\InvalidArgumentException $exception) {
+            return [];
+        }
     }
 }
